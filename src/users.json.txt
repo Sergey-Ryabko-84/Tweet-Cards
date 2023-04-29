@@ -1,0 +1,142 @@
+[
+ {
+  "user": "Traci Robel",
+  "tweets": 22616,
+  "followers": 58208,
+  "avatar": "https://media.zenfs.com/en/buzzfeed_articles_778/21f8b18fb86246ebc7f981d019c22335",
+  "id": "1"
+ },
+ {
+  "user": "Michael Rath III",
+  "tweets": 2937,
+  "followers": 50761,
+  "avatar": "https://media.zenfs.com/en/buzzfeed_articles_778/56860f59c0d13a0e5e442a6074778a7f",
+  "id": "2"
+ },
+ {
+  "user": "Dana Rowe",
+  "tweets": 98521,
+  "followers": 65250,
+  "avatar": "https://media.zenfs.com/en/buzzfeed_articles_778/9b89fd5e50d299f91dfa6f8793c80ddc",
+  "id": "3"
+ },
+ {
+  "user": "Mrs. Henrietta Breitenberg",
+  "tweets": 87175,
+  "followers": 94164,
+  "avatar": "https://media.zenfs.com/en/buzzfeed_articles_778/bfd324c47a33902d1fe2df51aeb2adba",
+  "id": "4"
+ },
+ {
+  "user": "Vicky Reinger",
+  "tweets": 82753,
+  "followers": 13789,
+  "avatar": "https://media.zenfs.com/en/buzzfeed_articles_778/8b0db3b56c029ae58b5c23322a676c33",
+  "id": "5"
+ },
+ {
+  "user": "Gerardo Rutherford",
+  "tweets": 98543,
+  "followers": 66627,
+  "avatar": "https://media.zenfs.com/en/buzzfeed_articles_778/ad91be43a0ca2f2fc44c41df08be21fc",
+  "id": "6"
+ },
+ {
+  "user": "Alvin Price",
+  "tweets": 90939,
+  "followers": 81881,
+  "avatar": "https://media.zenfs.com/en/buzzfeed_articles_778/b2fd064b049aaac6523eed59b3ac7661",
+  "id": "7"
+ },
+ {
+  "user": "Roy Kuhn",
+  "tweets": 80367,
+  "followers": 87632,
+  "avatar": "https://media.zenfs.com/en/buzzfeed_articles_778/1976232fe7be3ae0c71fb846ea7f2e3b",
+  "id": "8"
+ },
+ {
+  "user": "Josefina Bartell",
+  "tweets": 84494,
+  "followers": 62102,
+  "avatar": "https://media.zenfs.com/en/buzzfeed_articles_778/98c41ade7f3a7768bd2d16d6596f6b03",
+  "id": "9"
+ },
+ {
+  "user": "Van Bayer",
+  "tweets": 32678,
+  "followers": 50738,
+  "avatar": "https://media.zenfs.com/en/buzzfeed_articles_778/56860f59c0d13a0e5e442a6074778a7f",
+  "id": "10"
+ },
+ {
+  "user": "Leah Ritchie",
+  "tweets": 98398,
+  "followers": 90457,
+  "avatar": "https://media.zenfs.com/en/buzzfeed_articles_778/235d74ad6660a0d556a46fcd1f11a254",
+  "id": "11"
+ },
+ {
+  "user": "Wilson Yost",
+  "tweets": 31788,
+  "followers": 87434,
+  "avatar": "https://media.zenfs.com/en/buzzfeed_articles_778/34630763c395b17c63029b60dd45da11",
+  "id": "12"
+ },
+ {
+  "user": "Elias Cummerata",
+  "tweets": 87092,
+  "followers": 27667,
+  "avatar": "https://media.zenfs.com/en/buzzfeed_articles_778/4280e76605956dffd2dd64fea069bce9",
+  "id": "13"
+ },
+ {
+  "user": "Edward Ferry II",
+  "tweets": 66436,
+  "followers": 39052,
+  "avatar": "https://media.zenfs.com/en/buzzfeed_articles_778/548a31735528301f3de52c2a55ca2c01",
+  "id": "14"
+ },
+ {
+  "user": "Frank Friesen",
+  "tweets": 70790,
+  "followers": 23791,
+  "avatar": "https://media.zenfs.com/en/buzzfeed_articles_778/7d14600f1f6d66a98161d6cc4b254499",
+  "id": "15"
+ },
+ {
+  "user": "Victoria Cormier",
+  "tweets": 70417,
+  "followers": 7075,
+  "avatar": "https://media.zenfs.com/en/buzzfeed_articles_778/702cd153658f12de89a9f808c1c00eae",
+  "id": "16"
+ },
+ {
+  "user": "Enrique Kilback",
+  "tweets": 23810,
+  "followers": 19408,
+  "avatar": "https://media.zenfs.com/en/buzzfeed_articles_778/ff8baa8f03e1dabc8224568ddb6c4314",
+  "id": "17"
+ },
+ {
+  "user": "Woodrow Wiza IV",
+  "tweets": 36676,
+  "followers": 4238,
+  "avatar": "https://media.zenfs.com/en/buzzfeed_articles_778/0d64003b41845c3930efc1e23b688863",
+  "id": "18"
+ },
+ {
+  "user": "Jennie Zboncak",
+  "tweets": 33654,
+  "followers": 10152,
+  "avatar": "https://media.zenfs.com/en/buzzfeed_articles_778/f6411d97d16de2b4a81c0364b4d848cb",
+  "id": "19"
+ },
+ {
+  "user": "Mabel Dooley",
+  "tweets": 11830,
+  "followers": 17010,
+  "avatar": "https://media.zenfs.com/en/buzzfeed_articles_778/b60ec3bcd7dbcea4c7a4ad3ad1323caa",
+  "id": "20"
+ }
+]
