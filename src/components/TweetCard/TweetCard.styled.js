@@ -50,6 +50,7 @@ export const FrameImg = styled.div`
   width: 90px;
   height: 89px;
   background: url(${Frame}) no-repeat;
+  overflow: hidden;
 `;
 
 export const FrameBgImg = styled.div`
@@ -58,14 +59,16 @@ export const FrameBgImg = styled.div`
   width: 80px;
   height: 80px;
   background: url(${FrameBg}) no-repeat;
+  
 `;
 
 export const Img = styled.img`
   position: absolute;
   top: 187.5px;
-  width: 62px;
-  height: 62px;
+  width: 70px;
+  height: 70px;
   background: url(${FrameBg}) no-repeat;
+  border-radius: 50%;
 `;
 
 export const InfoWrapper = styled.div`

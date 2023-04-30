@@ -12,21 +12,17 @@ import {
   PictureImg,
   StripImg,
 } from "./TweetCard.styled";
-import Avatar from "../../assets/avatar.png";
 
-function TweetCard() {
+function TweetCard({ user }) {
+  const { id, avatar, tweets, followers } = user;
   const [isFollowing, setIsFollowing] = useState(false);
   const [addition, setAddition] = useState(0);
   const [btnCaption, setBtnCaption] = useState("Follow");
   const [btnColor, setBtnColor] = useState("#EBD8FF");
 
-  const tweetsCount = 777;
-  const followersCount = 100500
-
   useEffect(() => {
-    console.log("localStorage.getItem");
-    setIsFollowing(JSON.parse(localStorage.getItem("isFollowing")));
-  }, [])
+    setIsFollowing(JSON.parse(localStorage.getItem(`isFollowing${id}`)));
+  }, [id]);
 
   useEffect(() => {
     if (isFollowing) {
@@ -38,13 +34,12 @@ function TweetCard() {
       setBtnCaption("Follow");
       setBtnColor("#EBD8FF");
     }
-  }, [isFollowing]);  
+  }, [isFollowing]);
 
-  const stateToggle = () => {    
-    console.log("localStorage.setItem");
-    localStorage.setItem("isFollowing", JSON.stringify(!isFollowing));
+  const stateToggle = () => {
+    localStorage.setItem(`isFollowing${id}`, JSON.stringify(!isFollowing));
     setIsFollowing((state) => !state);
-  }  
+  };
 
   return (
     <CardWrapper>
@@ -52,15 +47,15 @@ function TweetCard() {
       <PictureImg />
       <StripImg />
       <FrameBgImg />
-      <Img src={Avatar} alt="avatar" />
-      <FrameImg></FrameImg>
+      <Img src={avatar} alt="avatar" width={70} height={70} loading="lazy" />
+      <FrameImg />
       <InfoWrapper>
         <InfoText>
-          <InfoCount>{tweetsCount}</InfoCount>tweets
+          <InfoCount>{tweets}</InfoCount>tweets
         </InfoText>
         <InfoText>
           <InfoCount>
-            {(followersCount + addition).toLocaleString("en-US")}
+            {(followers + addition).toLocaleString("en-US")}
           </InfoCount>
           followers
         </InfoText>

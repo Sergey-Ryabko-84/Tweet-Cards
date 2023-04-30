@@ -1,8 +1,10 @@
-function LoadMore() {
+import { Button } from "./LoadMore.styled";
+
+function LoadMore({ clickHandler }) {
   return (
-    <>
-      <button>LoadMore</button>
-    </>
+    <Button type="button" onClick={clickHandler}>
+      Load More
+    </Button>
   );
 }
 
