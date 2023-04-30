@@ -5,6 +5,7 @@ import TweetCard from "../../components/TweetCard/TweetCard";
 import LoadMore from "../../components/LoadMore/LoadMore";
 import Filter from "../../components/Filter/Filter";
 import { List, Section } from "./TweetsPage.styled";
+import { smoothlyScroll } from "../../services/utils/smoothlyScroll";
 
 function TweetsPage() {
   const [users, setUsers] = useState([]);
@@ -23,7 +24,14 @@ function TweetsPage() {
     })();
   }, []);
 
-  const onLoadMoreClick = () => setPage((state) => state + 1);
+  useEffect(() => {
+    smoothlyScroll();
+  }, [page]);
+  
+
+  const onLoadMoreClick = () => {
+    setPage((state) => state + 1)
+  };
 
   const filtration = (e) => {
     switch (e.target.value) {
