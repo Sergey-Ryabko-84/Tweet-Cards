@@ -1,14 +1,18 @@
 import { useEffect, useState } from "react";
-import TweetCard from "../../components/TweetCard/TweetCard";
 import { fetchUsers } from "../../services/api/usersApi";
+import useWindowDimensions from "../../services/hooks/useWindowDimensions";
+import TweetCard from "../../components/TweetCard/TweetCard";
 import LoadMore from "../../components/LoadMore/LoadMore";
 import Filter from "../../components/Filter/Filter";
+import { List, Section } from "./TweetsPage.styled";
 
 function TweetsPage() {
   const [users, setUsers] = useState([]);
   const [visibleUsers, setVisibleUsers] = useState([]);
   const [page, setPage] = useState(1);
-  const cardsPerPage = 3;
+  const { width } = useWindowDimensions();
+
+  const cardsPerPage = (width >= 904 && width < 1332) || width >= 1760 ? 4 : 3;
 
   useEffect(() => {
     (async () => {
@@ -25,7 +29,6 @@ function TweetsPage() {
     switch (e.target.value) {
       case "all":
         setVisibleUsers(users);
-        // console.log("all visibleUsers:", visibleUsers);
         break;
 
       case "follow":
@@ -34,7 +37,6 @@ function TweetsPage() {
             (user) => !JSON.parse(localStorage.getItem(`isFollowing${user.id}`))
           )
         );
-        // console.log("follow visibleUsers:", visibleUsers);
         break;
 
       case "following":
@@ -43,7 +45,6 @@ function TweetsPage() {
             JSON.parse(localStorage.getItem(`isFollowing${user.id}`))
           )
         );
-        // console.log("following visibleUsers:", visibleUsers);
         break;
 
       default:
@@ -53,23 +54,20 @@ function TweetsPage() {
   };
 
   return (
-    <>
-      <h1>Tweets Page</h1>
-
+    <Section>
       <Filter filterHandler={filtration} />
-
-      <ul>
+      <List>
         {visibleUsers.length > 0 &&
           visibleUsers.slice(0, page * cardsPerPage).map((user) => (
             <li key={user.id}>
               <TweetCard user={user} />
             </li>
           ))}
-      </ul>
+      </List>
       {page * cardsPerPage < visibleUsers.length && (
         <LoadMore clickHandler={onLoadMoreClick} />
       )}
-    </>
+    </Section>
   );
 }
 

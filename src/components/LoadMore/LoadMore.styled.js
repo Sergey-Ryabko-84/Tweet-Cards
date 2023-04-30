@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const Button = styled.button`
   width: 196px;
   height: 50px;
-  margin-top: 18px;
   border-radius: 10px;
   border: none;
   cursor: pointer;
@@ -14,7 +13,6 @@ export const Button = styled.button`
   line-height: 1.22;
   text-transform: uppercase;
   color: #ebd8ff;
-  /* color: #373737; */
 
   :hover {
     background-color: #471ca9E0;

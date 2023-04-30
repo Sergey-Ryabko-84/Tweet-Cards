@@ -9,6 +9,8 @@ export const GlobalStyle = createGlobalStyle`
         sans-serif;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
+
+        background-color: #ebd8ff;
     }
     
     code {
@@ -24,7 +26,7 @@ export const GlobalStyle = createGlobalStyle`
         list-style: none;
     }
 
-    h1, h2, h3, h4, h5, h6, p {
+    h1, h2, h3, h4, h5, h6, p, ul {
         margin: 0;
         padding: 0;
     }

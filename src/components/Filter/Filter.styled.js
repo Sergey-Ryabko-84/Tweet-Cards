@@ -1,13 +1,17 @@
 import styled from "styled-components";
 
 export const FormWrapper = styled.form`
-  width: 196px;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  width: 100%;
   height: 50px;
+  z-index: 1;
 `;
 
 export const Select = styled.select`
   padding: 12px;
-  width: 100%;
+  width: 196px;
   height: 100%;
   border-radius: 10px;
   border: none;

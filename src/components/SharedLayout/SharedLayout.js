@@ -1,21 +1,16 @@
 import { Suspense } from "react";
-import { NavLink, Outlet } from "react-router-dom";
-import { ReactComponent as LogoIcon } from "../../assets/logo.svg"
+import { Outlet } from "react-router-dom";
+import { LayoutWrapper } from "./SharedLayout.styled";
+import Header from "../Header/Header";
 
 function SharedLayout() {
   return (
-    <>
-      <header>
-        <h1><LogoIcon /></h1>
-        <nav>
-          <NavLink to="/">Home</NavLink>
-          <NavLink to="/tweets">Tweets</NavLink>
-        </nav>
-      </header>
+    <LayoutWrapper>
+      <Header/>
       <Suspense fallback={null}>
         <Outlet />
       </Suspense>
-    </>
+    </LayoutWrapper>
   );
 }
 
