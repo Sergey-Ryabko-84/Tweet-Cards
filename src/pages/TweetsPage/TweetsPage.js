@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import TweetCard from "../../components/TweetCard/TweetCard";
 import { fetchUsers } from "../../services/api/usersApi";
 import LoadMore from "../../components/LoadMore/LoadMore";
-import { FormWrapper, Option, Select } from "./TweetsPage.styled";
 import Filter from "../../components/Filter/Filter";
 
 function TweetsPage() {
