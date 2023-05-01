@@ -5,7 +5,11 @@ export const Section = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 24px 48px;
+  padding: 24px 48px 146px 48px;
+
+  @media screen and (max-width: 768px) {
+    padding-bottom: 24px;
+  }
 `;
 
 export const HiddenTitle = styled.h1`

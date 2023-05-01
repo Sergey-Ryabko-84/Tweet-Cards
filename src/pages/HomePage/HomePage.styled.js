@@ -9,7 +9,6 @@ export const Wrapper = styled.div`
   height: 60vh;
   margin-top: 48px;
   padding: 24px 200px 24px 48px;
-  /* background-color: #5cd3a8cc; */
   color: #373737;
   background-image: linear-gradient(to left, #5cd3a899 25%, #5cd3a8);
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
