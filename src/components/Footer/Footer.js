@@ -11,11 +11,11 @@ import {
 
 function Footer() {
   const name = "Serhii Riabko";
-  const phoneNumber = "+1234567890";
-  const email = "serhii.riabko@example.com";
-  const githubLink = "https://github.com/yourusername";
-  const linkedinLink = "https://www.linkedin.com/in/yourprofile";
-  const telegramLink = "https://t.me/yourusername";
+  const phoneNumber = "+380506220906";
+  const email = "serhii.ryabko@gmail.com";
+  const githubLink = "https://github.com/Sergey-Ryabko-84";
+  const linkedinLink = "https://www.linkedin.com/in/serhii-ryabko-250247255";
+  const telegramLink = "https://t.me/Serhii_Ryabko";
 
   return (
     <FooterWrapper>
