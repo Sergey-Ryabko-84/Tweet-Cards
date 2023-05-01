@@ -6,31 +6,45 @@ import LoadMore from "../../components/LoadMore/LoadMore";
 import Filter from "../../components/Filter/Filter";
 import { List, Section } from "./TweetsPage.styled";
 import { smoothlyScroll } from "../../services/utils/smoothlyScroll";
+import { Loader } from "../../components/Loader/Loader";
+import { ErrorMsg } from "../../components/ErrorMsg/ErrorMsg";
 
 function TweetsPage() {
   const [users, setUsers] = useState([]);
   const [visibleUsers, setVisibleUsers] = useState([]);
   const [page, setPage] = useState(1);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState(null);
   const { width } = useWindowDimensions();
 
   const cardsPerPage = (width >= 904 && width < 1332) || width >= 1760 ? 4 : 3;
 
   useEffect(() => {
     (async () => {
-      setUsers(await fetchUsers());
-    })();
-    (async () => {
-      setVisibleUsers(await fetchUsers());
+      setIsLoading(true);
+      setError(null);
+      try {
+        const data = await fetchUsers();
+        setUsers(data);
+        setVisibleUsers(data);
+      } catch (error) {
+        setError(error.message);
+      } finally {
+        setIsLoading(false);
+      }
     })();
   }, []);
 
   useEffect(() => {
+    console.log(Date.now(), isLoading);
+  }, [isLoading]);
+
+  useEffect(() => {
     smoothlyScroll();
   }, [page]);
-  
 
   const onLoadMoreClick = () => {
-    setPage((state) => state + 1)
+    setPage((state) => state + 1);
   };
 
   const filtration = (e) => {
@@ -64,6 +78,10 @@ function TweetsPage() {
   return (
     <Section>
       <Filter filterHandler={filtration} />
+
+      {isLoading && <Loader />}
+      {error && <ErrorMsg />}
+
       <List>
         {visibleUsers.length > 0 &&
           visibleUsers.slice(0, page * cardsPerPage).map((user) => (
