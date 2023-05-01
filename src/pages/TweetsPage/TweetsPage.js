@@ -1,13 +1,16 @@
 import { useEffect, useState } from "react";
 import { fetchUsers } from "../../services/api/usersApi";
+import { MdOutlineArrowBackIosNew } from "react-icons/md";
 import useWindowDimensions from "../../services/hooks/useWindowDimensions";
+import { smoothlyScroll } from "../../services/utils/smoothlyScroll";
 import TweetCard from "../../components/TweetCard/TweetCard";
 import LoadMore from "../../components/LoadMore/LoadMore";
 import Filter from "../../components/Filter/Filter";
-import { List, Section } from "./TweetsPage.styled";
-import { smoothlyScroll } from "../../services/utils/smoothlyScroll";
 import { Loader } from "../../components/Loader/Loader";
 import { ErrorMsg } from "../../components/ErrorMsg/ErrorMsg";
+import { HiddenTitle, Link, List, Section } from "./TweetsPage.styled";
+
+
 
 function TweetsPage() {
   const [users, setUsers] = useState([]);
@@ -77,6 +80,10 @@ function TweetsPage() {
 
   return (
     <Section>
+      <HiddenTitle>Tweets Page</HiddenTitle>
+      <Link to="/">
+        <MdOutlineArrowBackIosNew />
+      </Link>
       <Filter filterHandler={filtration} />
 
       {isLoading && <Loader />}

@@ -23,6 +23,10 @@ export const Nav = styled.nav`
   display: flex;
   gap: 24px;
   margin-left: 24px;
+
+  @media screen and (max-width: 480px) {
+    margin-left: -24px;
+  }
 `;
 
 export const Link = styled(NavLink)`
