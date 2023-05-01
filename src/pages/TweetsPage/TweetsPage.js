@@ -10,6 +10,7 @@ import { Loader } from "../../components/Loader/Loader";
 import { ErrorMsg } from "../../components/ErrorMsg/ErrorMsg";
 import { HiddenTitle, Link, List, Section } from "./TweetsPage.styled";
 
+import { Helmet } from "react-helmet";
 
 
 function TweetsPage() {
@@ -80,6 +81,9 @@ function TweetsPage() {
 
   return (
     <Section>
+      <Helmet>
+        <title>Tweets</title>
+      </Helmet>
       <HiddenTitle>Tweets Page</HiddenTitle>
       <Link to="/">
         <MdOutlineArrowBackIosNew />

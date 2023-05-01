@@ -33,17 +33,17 @@ function Footer() {
       </ContactList>
       <ContactLinkList>
         <li>
-          <Link href={githubLink}>
+          <Link href={githubLink} target="_blank">
             <BsGithub size={28} />
           </Link>
         </li>
         <li>
-          <Link href={linkedinLink}>
+          <Link href={linkedinLink} target="_blank">
             <BsLinkedin size={28} />
           </Link>
         </li>
         <li>
-          <Link href={telegramLink}>
+          <Link href={telegramLink} target="_blank">
             <BsTelegram size={28} />
           </Link>
         </li>
